@@ -302,9 +302,10 @@ After applying various algorithms, we will obtain results after plotting everyth
         hold off
         %% ----------------Save each frame to the Output File------------------
         writeVideo(Output_Video,getframe);
-    end
-    %% -------------------Closing Save Video File Variable---------------------
-    close(Output_Video)
+        end
+        %% -------------------Closing Save Video File Variable---------------------
+        close(Output_Video)
+
 
 
 ![project_video_output](https://user-images.githubusercontent.com/81799459/235457737-78597d7a-8ecd-44fe-bc6b-9ca323eea9a7.gif)
