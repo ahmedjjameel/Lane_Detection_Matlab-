@@ -12,8 +12,10 @@ In this project, MATLAB serves as an image processing tool for the detection of 
 5.	Lane recognition Algorithm: Hough Transform Snapshot of the lane recognition output with the Hough transform method.
 6.	Plot everything on the Image and write it into the output video.
 
-1.	Frame Extraction and Processing
+
+### Frame Extraction and Processing:  	
 The first step is to import the video file, initialize the variables, and import from the .mat file in code.
+
 
     close all; clear; clc;
     %% -----------------------Importing the Video File-------------------------
