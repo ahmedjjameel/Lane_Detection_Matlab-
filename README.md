@@ -285,27 +285,26 @@ Canny's edge detection algorithm has the advantage of a higher computational spe
 6.	Output Video
 After applying various algorithms, we will obtain results after plotting everything on the Image and writing it into video.
 
-    %% Plotting Everything on the image
-    %% -Plot the extrapolated lines, Trapezoid and direction on each frame-
-    figure('Name','Final Output')
-    imshow(frame);
+        %% Plotting Everything on the image
+        %% -Plot the extrapolated lines, Trapezoid and direction on each frame-
+        figure('Name','Final Output'), imshow(frame);
     
     
     ![Fig13](https://user-images.githubusercontent.com/81799459/235509891-01a736e4-99a2-4a0d-90b5-c3eaa8b2ffda.gif)
 
     
     
-    hold on
-    plot([xLeftY, xRightY], [yLeftY, yRightY], 'LineWidth',8,'Color','red');
-    plot([xLeftW, xRightW], [yLeftW, yRightW], 'LineWidth',8,'Color','red');
-    text(650, 65, direction,'horizontalAlignment', 'center', 'Color','red','FontSize',20)
-    patch('Faces', number, 'Vertices', points, 'FaceColor','green','Edgecolor','green','FaceAlpha',0.4)
-    hold off
-    %% ----------------Save each frame to the Output File------------------
-    writeVideo(Output_Video,getframe);
-end
-%% -------------------Closing Save Video File Variable---------------------
-close(Output_Video)
+        hold on
+        plot([xLeftY, xRightY], [yLeftY, yRightY], 'LineWidth',8,'Color','red');
+        plot([xLeftW, xRightW], [yLeftW, yRightW], 'LineWidth',8,'Color','red');
+        text(650, 65, direction,'horizontalAlignment', 'center', 'Color','red','FontSize',20)
+        patch('Faces', number, 'Vertices', points, 'FaceColor','green','Edgecolor','green','FaceAlpha',0.4)
+        hold off
+        %% ----------------Save each frame to the Output File------------------
+        writeVideo(Output_Video,getframe);
+    end
+    %% -------------------Closing Save Video File Variable---------------------
+    close(Output_Video)
 
 
 ![project_video_output](https://user-images.githubusercontent.com/81799459/235457737-78597d7a-8ecd-44fe-bc6b-9ca323eea9a7.gif)
