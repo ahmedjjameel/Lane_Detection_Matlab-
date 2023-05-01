@@ -74,6 +74,8 @@ A color mask isolates a specific color in an image. You can apply a color mask t
             (frame(:,:,3)>=channel3MinW)&(frame(:,:,3)<=channel3MaxW);
         figure('Name','White Mask'), imshow(White);
 
+![Fig3](https://user-images.githubusercontent.com/81799459/235507501-453b92d0-ce20-42ea-a63d-001f4aec38a3.gif) | ![Fig4](https://user-images.githubusercontent.com/81799459/235507509-5bb15eb3-7667-4452-bd44-460275072019.gif)
+:-------------------------:|:-------------------------:
 
 ### Edge detection
 This section extracts edges from the masked Image and neglects closed edges with smaller areas. Edge detection is an image processing technique used to identify points in a digital image with discontinuities. are called the edges (or borders) of the picture.
@@ -87,6 +89,9 @@ This section extracts edges from the masked Image and neglects closed edges with
         figure('Name','Detecting Edges of Yellow mask'), imshow(frameY);
         figure('Name','Detecting Edges of White mask'), imshow(frameW);
 
+
+![Fig5](https://user-images.githubusercontent.com/81799459/235508040-462feb0c-0a50-4029-809a-8117cef1d460.gif)  |  ![Fig6](https://user-images.githubusercontent.com/81799459/235508057-aa240d38-79cd-4e8c-a8fc-40cdbb8b32fa.gif)
+:-------------------------:|:-------------------------:
 
 ###	Extraction of the region of interest
 As indicated in the pipeline for project implementation, the region of interest is extracted with the function 'Roipoly' and selection of frame points. An area of interest (ROI) is part of an image that you want to filter or edit somehow. You can display an ROI as a binary mask image: In the mask image, the pixels belonging to the ROI are set to 1, and the pixels outside the ROI are set to 0.
@@ -119,6 +124,8 @@ As indicated in the pipeline for project implementation, the region of interest 
     end
     figure('Name','Filtering ROI from White mask'), imshow(frame_roiW);  
 
+![Fig7](https://user-images.githubusercontent.com/81799459/235508449-f4926026-c2d7-44fa-a1bb-eb5f6c89de63.gif)  |  ![Fig8](https://user-images.githubusercontent.com/81799459/235508456-c267a1ed-d221-48c7-8e9a-b9106a17a31d.gif)
+:-------------------------:|:-------------------------:
 
 ###	Hough Transform
 In this section, I have used the Hough function to get the Hough transform of the binary edge-detected Image that gives us the Hough values. Then I have the Hough diagram. It is a technique that can be used to isolate features of a particular shape within an image since the desired features must be parametrically specified in some way.
@@ -185,7 +192,8 @@ In this section, I have used the Hough function to get the Hough transform of th
     end
     hold off
 
-
+![Fig9](https://user-images.githubusercontent.com/81799459/235509439-f6e5d2ad-b6aa-4ec6-a22e-6ebc8dc88381.gif)  |  ![Fig10](https://user-images.githubusercontent.com/81799459/235509445-9d45af83-d1ea-4158-90a9-7011fb7b28fd.gif)
+:-------------------------:|:-------------------------:
 
 Canny's edge detection algorithm in connection with Hough transform
 Canny's edge detection algorithm has the advantage of a higher computational speed. Still, it can overlook some apparent details of the crossing edge because isotropic Gaussian kernels are used. In this section, the lines into Hough lines are extrapolated into the filtered main Image.
@@ -223,7 +231,8 @@ Canny's edge detection algorithm has the advantage of a higher computational spe
         right_plot(2,:) = rightp2(2,:);
     end
 
-
+![Fig11](https://user-images.githubusercontent.com/81799459/235509275-9ec2e59a-2625-4e5d-ac3e-bcdb2a1909b3.gif)  |  ![Fig12](https://user-images.githubusercontent.com/81799459/235509287-7b8789f3-dd75-4df7-a0d9-7ab45c763100.gif)
+:-------------------------:|:-------------------------:
 
 %% --------------Calculate slope of left and right lines---------------
     slopeL = (left_plot(2,2)-left_plot(1,2))/(left_plot(2,1)-left_plot(1,1));
@@ -280,6 +289,12 @@ After applying various algorithms, we will obtain results after plotting everyth
     %% -Plot the extrapolated lines, Trapezoid and direction on each frame-
     figure('Name','Final Output')
     imshow(frame);
+    
+    
+    ![Fig13](https://user-images.githubusercontent.com/81799459/235509891-01a736e4-99a2-4a0d-90b5-c3eaa8b2ffda.gif)
+
+    
+    
     hold on
     plot([xLeftY, xRightY], [yLeftY, yRightY], 'LineWidth',8,'Color','red');
     plot([xLeftW, xRightW], [yLeftW, yRightW], 'LineWidth',8,'Color','red');
@@ -292,8 +307,7 @@ end
 %% -------------------Closing Save Video File Variable---------------------
 close(Output_Video)
 
+
 ![project_video_output](https://user-images.githubusercontent.com/81799459/235457737-78597d7a-8ecd-44fe-bc6b-9ca323eea9a7.gif)
-
-
 
 
