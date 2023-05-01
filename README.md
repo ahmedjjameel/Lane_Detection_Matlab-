@@ -38,9 +38,9 @@ A color mask isolates a specific color in an image. You can apply a color mask t
         figure('Name','Original Image'), imshow(frame);
         frame = imgaussfilt3(frame);
         figure('Name','Filtered Image'), imshow(frame);
-![Fig111](https://user-images.githubusercontent.com/81799459/235461650-8cea76f4-cc3b-4cd2-a307-98c85121c936.gif)         ![Fig222](https://user-images.githubusercontent.com/81799459/235461659-bf566855-f73b-40dd-96c6-12ba32a4befa.gif)  
-####         Original Image                                  Gaussian Filtered Image
-    
+![Fig111](https://user-images.githubusercontent.com/81799459/235461650-8cea76f4-cc3b-4cd2-a307-98c85121c936.gif)    |    ![Fig222](https://user-images.githubusercontent.com/81799459/235461659-bf566855-f73b-40dd-96c6-12ba32a4befa.gif)  
+:-------------------------:|:-------------------------:
+  
 
         %% Masking the image for White and Yellow Color
         %% ------------Define Thresholds for masking Yellow Color--------------
