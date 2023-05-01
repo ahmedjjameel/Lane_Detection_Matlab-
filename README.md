@@ -1,6 +1,7 @@
 ## Autonomous Vehicles Lane Detection using Image Processing Techniques
 
-![project_video](https://user-images.githubusercontent.com/81799459/235457658-bd6a6179-5367-4351-8ce1-e691ff798d55.gif)  ![project_video_output](https://user-images.githubusercontent.com/81799459/235457672-c48b9d4b-d8dd-4866-95df-3288734f2010.gif)
+![project_video](https://user-images.githubusercontent.com/81799459/235457658-bd6a6179-5367-4351-8ce1-e691ff798d55.gif) | ![project_video_output](https://user-images.githubusercontent.com/81799459/235457672-c48b9d4b-d8dd-4866-95df-3288734f2010.gif)
+:-------------------------:|:-------------------------:
 
 ### Introduction
 It is well known that lane recognition on freeways is an essential part of any successful autonomous driving system. An autonomous car consists of an extensive sensor system and several control modules. The most critical step to robust autonomous driving is to recognize and understand the surroundings. However, it is not enough to identify obstacles and understand the geometry around a vehicle. Camera-based Lane detection can be an essential step towards environmental awareness. It enables the car to be correctly positioned within the lane, which is crucial for every exit and the back lane - planning decision. Therefore, camera-based accurate lane detection with real-time edge detection is vital for autonomous driving and avoiding traffic accidents.
