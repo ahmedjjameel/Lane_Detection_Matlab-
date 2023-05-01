@@ -235,7 +235,7 @@ Canny's edge detection algorithm has the advantage of a higher computational spe
 ![Fig11](https://user-images.githubusercontent.com/81799459/235509275-9ec2e59a-2625-4e5d-ac3e-bcdb2a1909b3.gif)  |  ![Fig12](https://user-images.githubusercontent.com/81799459/235509287-7b8789f3-dd75-4df7-a0d9-7ab45c763100.gif)
 :-------------------------:|:-------------------------:
 
-%% --------------Calculate slope of left and right lines---------------
+    %% --------------Calculate slope of left and right lines---------------
     slopeL = (left_plot(2,2)-left_plot(1,2))/(left_plot(2,1)-left_plot(1,1));
     slopeR = (right_plot(2,2)-right_plot(1,2))/(right_plot(2,1)-right_plot(1,1));
     %% ----Make equations of left and right lines to extrapolate them------
