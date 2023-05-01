@@ -1,6 +1,11 @@
 ## Autonomous Vehicles Lane Detection using Image Processing Techniques
 
-![project_video_output](https://user-images.githubusercontent.com/81799459/235457295-637657e8-622a-4a5d-9871-5b1921b85313.gif)
+![project_video](https://user-images.githubusercontent.com/81799459/235457658-bd6a6179-5367-4351-8ce1-e691ff798d55.gif)
+
+![project_video_output](https://user-images.githubusercontent.com/81799459/235457672-c48b9d4b-d8dd-4866-95df-3288734f2010.gif)
+
+
+
 
 
 ### Introduction
@@ -292,7 +297,8 @@ end
 %% -------------------Closing Save Video File Variable---------------------
 close(Output_Video)
 
+![project_video_output](https://user-images.githubusercontent.com/81799459/235457737-78597d7a-8ecd-44fe-bc6b-9ca323eea9a7.gif)
 
-![project_video_output](https://user-images.githubusercontent.com/81799459/235457227-60aa1f8a-1445-4375-99ec-f12436d3ffbf.gif)
+
 
 
