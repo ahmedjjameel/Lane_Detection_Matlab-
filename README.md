@@ -293,7 +293,7 @@ After applying various algorithms, we will obtain results after plotting everyth
 
 
 ![Fig13](https://user-images.githubusercontent.com/81799459/235509891-01a736e4-99a2-4a0d-90b5-c3eaa8b2ffda.gif)
-:-------------------------:|:-------------------------:
+
     
     
         hold on
