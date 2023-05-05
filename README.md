@@ -15,7 +15,7 @@ In this project, MATLAB serves as an image processing tool for the detection of 
 5.	Lane recognition Algorithm: Hough Transform Snapshot of the lane recognition output with the Hough transform method.
 6.	Plot everything on the Image and write it into the output video.
 
-### Frame Extraction and Processing:  	
+### 1. Frame Extraction and Processing:  	
 The first step is to import the video file, initialize the variables, and import from the .mat file in code.
 
     close all; clear; clc;
@@ -28,7 +28,7 @@ The first step is to import the video file, initialize the variables, and import
     Output_Video.FrameRate= 25;
     open(Output_Video);
        
-### White and Yellow Image Masking
+### 2. White and Yellow Image Masking
 A color mask isolates a specific color in an image. You can apply a color mask to a clip to correct a particular color, exclude that color from corrections in the rest of the Image, or both. The frame is read first and filtered with a Gaussian filter. The frame is masked with yellow and white so that the lane lines can be seen perfectly.
 
     %% White and Yellow Image Masking
@@ -78,7 +78,7 @@ A color mask isolates a specific color in an image. You can apply a color mask t
 ![Fig3](https://user-images.githubusercontent.com/81799459/235507501-453b92d0-ce20-42ea-a63d-001f4aec38a3.gif) | ![Fig4](https://user-images.githubusercontent.com/81799459/235507509-5bb15eb3-7667-4452-bd44-460275072019.gif)
 :-------------------------:|:-------------------------:
 
-### Edge detection
+### 3. Edge detection
 This section extracts edges from the masked Image and neglects closed edges with smaller areas. Edge detection is an image processing technique used to identify points in a digital image with discontinuities. are called the edges (or borders) of the picture.
 
         %% Detecting edges in the image using Canny edge function
@@ -94,7 +94,7 @@ This section extracts edges from the masked Image and neglects closed edges with
 ![Fig5](https://user-images.githubusercontent.com/81799459/235508040-462feb0c-0a50-4029-809a-8117cef1d460.gif)  |  ![Fig6](https://user-images.githubusercontent.com/81799459/235508057-aa240d38-79cd-4e8c-a8fc-40cdbb8b32fa.gif)
 :-------------------------:|:-------------------------:
 
-###	Extraction of the region of interest
+###	4. Extraction of the region of interest
 As indicated in the pipeline for project implementation, the region of interest is extracted with the function 'Roipoly' and selection of frame points. An area of interest (ROI) is part of an image that you want to filter or edit somehow. You can display an ROI as a binary mask image: In the mask image, the pixels belonging to the ROI are set to 1, and the pixels outside the ROI are set to 0.
 
     %% Extraction of the region of interest ROI
@@ -128,7 +128,7 @@ As indicated in the pipeline for project implementation, the region of interest 
 ![Fig7](https://user-images.githubusercontent.com/81799459/235508449-f4926026-c2d7-44fa-a1bb-eb5f6c89de63.gif)  |  ![Fig8](https://user-images.githubusercontent.com/81799459/235508456-c267a1ed-d221-48c7-8e9a-b9106a17a31d.gif)
 :-------------------------:|:-------------------------:
 
-###	Hough Transform
+###	5. Hough Transform
 In this section, I have used the Hough function to get the Hough transform of the binary edge-detected Image that gives us the Hough values. Then I have the Hough diagram. It is a technique that can be used to isolate features of a particular shape within an image since the desired features must be parametrically specified in some way.
 
     %% Applying Hough Tansform to get straight lines from Image
@@ -196,7 +196,7 @@ In this section, I have used the Hough function to get the Hough transform of th
 ![Fig9](https://user-images.githubusercontent.com/81799459/235509439-f6e5d2ad-b6aa-4ec6-a22e-6ebc8dc88381.gif)  |  ![Fig10](https://user-images.githubusercontent.com/81799459/235509445-9d45af83-d1ea-4158-90a9-7011fb7b28fd.gif)
 :-------------------------:|:-------------------------:
 
-## Canny's edge detection algorithm in connection with Hough transform
+### Canny's edge detection algorithm in connection with Hough transform
 Canny's edge detection algorithm has the advantage of a higher computational speed. Still, it can overlook some apparent details of the crossing edge because isotropic Gaussian kernels are used. In this section, the lines into Hough lines are extrapolated into the filtered main Image.
 
     %% Canny's edge detection algorithm in connection with Hough transform
@@ -283,7 +283,7 @@ Canny's edge detection algorithm has the advantage of a higher computational spe
         direction = 'Turn Right';
     end
 
-## Output Video
+### 6. Output Video
 After applying various algorithms, we will obtain results after plotting everything on the Image and writing it into video.
 
         %% Plotting Everything on the image
@@ -311,4 +311,8 @@ After applying various algorithms, we will obtain results after plotting everyth
 
 ![project_video_output](https://user-images.githubusercontent.com/81799459/235457737-78597d7a-8ecd-44fe-bc6b-9ca323eea9a7.gif)
 
+### References
+[1]
+[2]
+[3]
 
