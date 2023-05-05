@@ -283,7 +283,7 @@ Canny's edge detection algorithm has the advantage of a higher computational spe
         direction = 'Turn Right';
     end
 
-6.	Output Video
+## Output Video
 After applying various algorithms, we will obtain results after plotting everything on the Image and writing it into video.
 
         %% Plotting Everything on the image
