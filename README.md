@@ -196,7 +196,7 @@ In this section, I have used the Hough function to get the Hough transform of th
 ![Fig9](https://user-images.githubusercontent.com/81799459/235509439-f6e5d2ad-b6aa-4ec6-a22e-6ebc8dc88381.gif)  |  ![Fig10](https://user-images.githubusercontent.com/81799459/235509445-9d45af83-d1ea-4158-90a9-7011fb7b28fd.gif)
 :-------------------------:|:-------------------------:
 
-Canny's edge detection algorithm in connection with Hough transform
+## Canny's edge detection algorithm in connection with Hough transform
 Canny's edge detection algorithm has the advantage of a higher computational speed. Still, it can overlook some apparent details of the crossing edge because isotropic Gaussian kernels are used. In this section, the lines into Hough lines are extrapolated into the filtered main Image.
 
     %% Canny's edge detection algorithm in connection with Hough transform
